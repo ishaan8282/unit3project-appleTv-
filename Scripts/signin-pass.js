@@ -1,5 +1,7 @@
 var signInData = JSON.parse(localStorage.getItem("signInData")) || [];
 var person = localStorage.getItem("person");
+ console.log("signdata",signInData)
+ console.log("person",person)
 
 var parentDocument = window.parent.document;
 var body = parentDocument.querySelector("body");
@@ -37,12 +39,11 @@ passSubmit.addEventListener("click", function () {
       alert("Welcome to Apple TV")
       break;
     }
-    else if (signInData[i].pass !== passInp.value){
-      alert("Wrong Password")
-      break;
-    }
   }
-  if (flag) {
+  if(flag==false){
+    alert("Enter a valid password")
+  }
+  else if (flag) {
     closeModal();
     advert.style.display = "none";
     jumboBtn.style.display = "none";

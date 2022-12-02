@@ -1,4 +1,5 @@
 var signInData = JSON.parse(localStorage.getItem("signInData")) || [];
+console.log(signInData)
 
 var inputID = document.querySelector("#inpID");
 var person = undefined;
